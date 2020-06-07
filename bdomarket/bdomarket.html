@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bdo Market</title>
+    <link rel="stylesheet" href="app/css/main.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+
+    <h1>Bdo Market Helper</h1>
+
+    <section class="buy_section">
+      <h3 class="t-center mb05">Compra</h3>
+      <div class="add_item_div">
+        <p>Adicionar item - Valor|Quantidade</p>
+        <button id="add_buy_item">Adicionar</button>
+      </div>
+
+      <div id="buy_items_list"></div>
+
+      <div class="buy_info">
+        <p>Total da compra <span id="buy_total"></span></p>
+        <p>Revenda direta com pacote <span id="direct_sell_with_pe"></span></p>
+        <p>
+          Revenda direta sem pacote <span id="direct_sell_without_pe"></span>
+        </p>
+        <p>
+          Valor minimo pra venda sem prejuiso com pacote
+          <span id="min_sell_with_pe"></span>
+        </p>
+        <p>
+          Valor minimo pra venda sem prejuiso sem pacote
+          <span id="min_sell_without_pe"></span>
+        </p>
+      </div>
+    </section>
+
+    <section class="sell_section">
+      <h3 class="t-center mb05">Venda</h3>
+      <div>
+        <p class="w8">
+          Valor da venda
+          <input
+            value="0"
+            id="sell_value"
+            type="number"
+            onkeyup="update_buy_result()"
+            onchange="update_buy_result()"
+          />
+        </p>
+        <p class="w2">
+          Quantidade
+          <input
+            value="1"
+            id="sell_qtd"
+            type="number"
+            onkeyup="update_buy_result()"
+            onchange="update_buy_result()"
+          />
+        </p>
+      </div>
+      <p>Valor da venda <span id="sell_value_info"></span></p>
+      <p>Lucro da venda com pacote <span id="sell_with_pe_proffit"></span></p>
+      <p>
+        Lucro da venda sem pacote <span id="sell_without_pe_proffit"></span>
+      </p>
+      <p>Venda com pacote <span id="sell_with_pe"></span></p>
+      <p>Venda sem pacote <span id="sell_without_pe"></span></p>
+    </section>
+
+    <section class="sell_section">
+      <h3 class="t-center">Calculadora</h3>
+
+      <input class="mt05" type="text" id="smallcalc" onkeyup="f_smallcalc()" placeholder="Exemplo: (12*2) / 4" />
+      <p id="smalcalcr" class="color-theme"></p>
+    </section>
+
+    <p style="margin-top: 2em;" class="color-theme t-center">Alch3myst</p>
+
+    <script src="app/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+  
+$themecolor: #a36d41
+$bgcolor: #151719
+
+.color-theme
+    color: $themecolor
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    font-family: 'Roboto', sans-serif
+    transition: all ease 150ms
+
+/* width */
+::-webkit-scrollbar 
+    width: 5px
+
+
+/* Track */
+::-webkit-scrollbar-track 
+    background: $bgcolor
+
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+    background: $themecolor
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+    background: darken($themecolor, 10%)
+
+button
+    border: none
+    border-radius: 3px
+    padding: 7px
+    cursor: pointer
+    &:hover
+        background-color: $themecolor
+        color: #fefefe
+    &:focus
+        background-color: darken($themecolor, 10%)
+        color: #fefefe
+        outline: none
+
+input
+    border: none
+    border-radius: 3px
+    outline: none
+
+body
+    padding: 20px 20%
+    background-color: #060608
+    > h1
+        width: 100%
+        text-align: center
+        margin-bottom: 1em
+        color: $themecolor
+
+.bg
+    background-color: $bgcolor
+    background-image: url(../img/bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    position: absolute
+    width: 100%
+    top: 0
+    height: 100%
+    z-index: -1
+    left: 0
+
+.buy_section
+    padding: 10px
+    background-color: $bgcolor
+    box-shadow: 3px 3px 0px $themecolor
+    margin-bottom: 1em
+    color: #fefefe
+    border-radius: 5px
+
+.add_item_div, .num_compras_div
+    display: flex
+    align-items: center
+    margin-bottom: 5px
+    padding: 5px
+    & p 
+        width: 85%
+    & button
+        width: 15%
+
+.buy_info
+    padding: 5px
+    & p
+        padding: 5px
+        border-bottom: 1px solid $themecolor
+    & p:nth-last-child(1)
+        border-bottom: none
+
+#buy_items_list
+    padding-bottom: 5px
+    box-shadow: 3px 3px $themecolor
+    border: 1px solid $themecolor
+    & div
+        padding: 5px 5px 0 5px
+        display: flex
+        & input
+            width: 85%
+            padding: 0 5px
+            margin-right: 5px
+        & input:nth-child(2)
+            width: 25%
+        & button
+            width: 15%
+
+.num_compras_div
+    margin-top: 5px
+    & input 
+        padding: 5px
+
+.sell_section
+    background-color: $bgcolor
+    box-shadow: 3px 3px 0px $themecolor
+    margin-bottom: 1em
+    color: #fefefe
+    padding: 10px
+    border-radius: 5px
+    > div
+        display: flex
+    & input
+        width: 100%
+        text-align: center
+        padding: 5px
+        margin-bottom: 1em
+        font-size: 1em
+    & p
+        padding: 5px
+        border-bottom: 1px solid $themecolor
+    & p:nth-last-child(1)
+        border-bottom: none
+    
+// Helpers
+.t-center
+    text-align: center
+.mb05
+    margin-bottom: 0.5em
+.mt05
+    margin-top: 0.5em
+.w8
+    width: 80%
+.w2
+    width: 20%
+
+
+@media only screen and (max-width: 768px)
+    body
+        padding: 20px 10%
+
+    .add_item_div, .num_compras_div
+        & p 
+            width: 80%
+        & button
+            width: 20%
+    #buy_items_list & div
+        & p 
+            width: 80%
+        & button
+            width: 20%
+
+
+@media only screen and (max-width: 600px)
+    body
+        padding: 20px 5%
+        .w8
+            width: 70%
+        .w2
+            width: 30%
