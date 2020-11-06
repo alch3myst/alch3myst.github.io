@@ -99,7 +99,7 @@ function update_buy_result() {
 
 function update_sell_result(buy_value) {
   sell_value_info.innerHTML = currency_format.format(
-    parseFloat(sell_value.value)
+    parseFloat(sell_value.value) * parseFloat(sell_qtd.value)
   );
 
   sell_with_pe_proffit.innerHTML = currency_format.format(
